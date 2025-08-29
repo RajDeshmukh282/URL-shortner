@@ -1,11 +1,14 @@
 import express from "express";
 import {nanoid} from "nanoid"
 import dotenv from "dotenv"
+import connectDB from "./src/config/mongose.config";
 
 dotenv.config( "./.env" );
 
 const app = express();
 app.use(express.json());
+
+connectDB();
 app.post("/api/create", (req, res) => {// make a route
   const { url } = req.body
   console.log(url);
