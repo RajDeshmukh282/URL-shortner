@@ -1,5 +1,8 @@
 import express from "express";
 import {nanoid} from "nanoid"
+import dotenv from "dotenv"
+
+dotenv.config( "./.env" );
 
 const app = express();
 app.use(express.json());
