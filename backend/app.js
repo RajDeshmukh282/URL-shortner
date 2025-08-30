@@ -1,9 +1,10 @@
 import express from "express";
 import {nanoid} from "nanoid"
 import dotenv from "dotenv"
-import connectDB from "./src/config/mongose.config";
+import connectDB from "./src/config/mongose.config.js";
 
-dotenv.config( "./.env" );
+dotenv.config({ path: "./.env" });
+
 
 const app = express();
 app.use(express.json());
