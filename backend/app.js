@@ -2,6 +2,7 @@ import express from "express";
 import {nanoid} from "nanoid"
 import dotenv from "dotenv"
 import connectDB from "./src/config/mongose.config.js";
+import ShortUrl from "./src/models/shorturl.model.js";
 
 dotenv.config({ path: "./.env" });
 
@@ -12,6 +13,12 @@ app.use(express.json());
 connectDB();
 app.post("/api/create", (req, res) => {// make a route
   const { url } = req.body
+  const shorturl =nanoid(7);
+  const newurl =new urlSchema({
+    orignalUrl :url,
+    shorturl :shorturl
+  })
+  newUrl.save()
   console.log(url);
   
   res.send(nanoid(7))
