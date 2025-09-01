@@ -1,5 +1,5 @@
-import { nanoid } from "nanoid"
+import { nanoid } from "nanoid";
 
-export const generateNanoId =()=>{
-    return nanoid(length)
-}
+export const generateNanoId = (length = 7) => {
+    return nanoid(length);
+};
