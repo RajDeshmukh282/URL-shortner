@@ -13,7 +13,7 @@ app.use(express.json());
 connectDB();
 
 // ✅ POST route to create a new short URL
-app.post("/api/create",short_url);
+app.use("/api/create",short_url);
 
 // ✅ GET route to handle redirection (MOVED HERE)
 app.get("/:id", async (req, res) => {

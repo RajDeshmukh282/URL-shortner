@@ -1,4 +1,4 @@
-import { generateNanoId } from "../utils/helper";
+import { generateNanoId } from "../utils/helper.js";
 
 export const createShortUrlService = async (url) => {
     const shortId = generateNanoId(8);
