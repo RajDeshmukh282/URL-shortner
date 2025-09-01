@@ -1,9 +1,11 @@
+import { generateNanoId } from "../utils/helper";
+
 export const  createShortUrl = async (req, res) => {
     try {
         const { url } = req.body;
 
         // generate short id
-        const shortId = nanoid(7);
+        const shortId = generateNanoId(8);
 
         // create new doc in MongoDB
         const newUrl = new urlShema({
